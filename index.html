@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李永志 - 嵌入式软件工程师</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --text-color: #333;
+            --light-gray: #f4f4f4;
+        }
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+        a { color: var(--secondary-color); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* Header & Hero */
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+        header h1 { margin: 0; font-size: 2.5rem; }
+        header p { margin: 0.5rem 0 0; font-size: 1.2rem; opacity: 0.9; }
+
+        /* Main Container */
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Sections */
+        section { margin-bottom: 2.5rem; }
+        h2 {
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            font-size: 1.8rem;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skill-tag {
+            background-color: var(--light-gray);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        /* Experience & Projects */
+        .item { margin-bottom: 1.5rem; }
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+        }
+        .item-title { font-size: 1.2rem; font-weight: bold; margin: 0; }
+        .item-subtitle { font-style: italic; color: #555; margin: 0; }
+        .item-date { font-size: 0.9rem; color: #777; white-space: nowrap; margin-left: 1rem; }
+        .item-content ul { margin: 0.5rem 0; padding-left: 1.2rem; }
+
+        /* Contact */
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1.5rem 0;
+            background-color: var(--light-gray);
+            color: #777;
+            font-size: 0.9rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 600px) {
+            .item-header { flex-direction: column; }
+            .item-date { margin-left: 0; margin-top: 0.5rem; }
+            .contact-list { flex-direction: column; gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- 替换下面的 src 为你自己的照片路径，或者使用网络图片链接 -->
+        <img src="你的照片文件名.jpg" alt="李永志" class="profile-img">
+        <h1>李永志</h1>
+        <p>嵌入式软件工程师</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- 个人简介 -->
+        <section>
+            <h2>个人简介</h2>
+            <p>
+                <!-- 在这里写一段简短的自我介绍，突出你的核心优势和职业目标 -->
+                例如：拥有X年嵌入式软件开发经验，精通C/C++，熟悉ARM、STM32等主流MCU架构。具备扎实的软硬件协同开发能力，对物联网、实时操作系统有深入理解和项目实践。热爱技术，追求代码质量与系统稳定性。
+            </p>
+        </section>
+
+        <!-- 专业技能 -->
+        <section>
+            <h2>专业技能</h2>
+            <div class="skills-grid">
+                <!-- 在这里添加你的技能，可以复制 <span> 标签 -->
+                <span class="skill-tag">C/C++</span>
+                <span class="skill-tag">ARM Cortex-M</span>
+                <span class="skill-tag">STM32</span>
+                <span class="skill-tag">FreeRTOS</span>
+                <span class="skill-tag">Linux驱动开发</span>
+                <span class="skill-tag">I2C, SPI, UART</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">示波器/逻辑分析仪</span>
+            </div>
+        </section>
+
+        <!-- 工作经历 -->
+        <section>
+            <h2>工作经历</h2>
+            
+            <div class="item">
+                <div class="item-header">
+                    <div>
+                        <p class="item-title">公司名称 A</p>
+                        <p class="item-subtitle">嵌入式软件工程师</p>
+                    </div>
+                    <p class="item-date">2022.01 - 至今</p>
+                </div>
+                <div class="item-content">
+                    <ul>
+                        <li>负责XX产品的固件开发和维护，使用C语言在STM32平台上实现多任务调度。</li>
+                        <li>优化了通信协议栈，将数据传输效率提升了20%。</li>
+                        <li>与硬件团队紧密合作，参与原理图评审和板级调试。</li>
+                        <!-- 复制 <li> 标签来添加更多工作描述 -->
+                    </ul>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <div>
+                        <p class="item-title">公司名称 B</p>
+                        <p class="item-subtitle">初级嵌入式工程师</p>
+                    </div>
+                    <p class="item-date">2020.07 - 2021.12</p>
+                </div>
+                <div class="item-content">
+                    <ul>
+                        <li>参与智能家居传感器节点的开发，实现低功耗数据采集与蓝牙传输。</li>
+                        <li>编写和调试底层驱动程序，包括GPIO, ADC, Timers等。</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- 项目经验 -->
+        <section>
+            <h2>项目经验</h2>
+            
+            <div class="item">
+                <div class="item-header">
+                    <p class="item-title">项目名称：智能农业监控系统</p>
+                    <p class="item-date">2023.03 - 2023.08</p>
+                </div>
+                <div class="item-content">
+                    <ul>
+                        <li><strong>项目描述：</strong> 一个用于实时监控农田温湿度、光照强度的物联网系统。</li>
+                        <li><strong>我的职责：</strong> 负责终端节点固件开发，基于FreeRTOS实现传感器数据读取、处理和通过LoRa模块上报。</li>
+                        <li><strong>技术栈：</strong> STM32L4, FreeRTOS, LoRa, Modbus。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <p class="item-title">项目名称：四轴飞行器飞控</p>
+                    <p class="item-date">2021.09 - 2022.01</p>
+                </div>
+                <div class="item-content">
+                    <ul>
+                        <li><strong>项目描述：</strong> 自主设计并实现一个小型四轴飞行器的姿态稳定控制系统。</li>
+                        <li><strong>我的职责：</strong> 移植并配置开源飞控固件，调试MPU6050传感器，使用PID算法实现姿态解算和电机控制。</li>
+                        <li><strong>技术栈：</strong> STM32F4, C, PID控制, I2C, PWM。</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- 教育背景 -->
+        <section>
+            <h2>教育背景</h2>
+            <div class="item">
+                <div class="item-header">
+                    <p class="item-title">某某大学</p>
+                    <p class="item-date">2016.09 - 2020.06</p>
+                </div>
+                <p class="item-subtitle">电子信息工程 | 本科</p>
+            </div>
+        </section>
+
+        <!-- 联系方式 -->
+        <section>
+            <h2>联系方式</h2>
+            <ul class="contact-list">
+                <!-- 替换 # 为你的真实链接 -->
+                <li>📧 <a href="mailto:your_email@example.com">your_email@example.com</a></li>
+                <li>💼 <a href="你的领英或招聘网站链接" target="_blank">LinkedIn/猎聘</a></li>
+                <li>🐙 <a href="你的GitHub链接" target="_blank">GitHub</a></li>
+            </ul>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>© 2026 李永志. 版权所有.</p>
+    </footer>
+
+</body>
+</html>
